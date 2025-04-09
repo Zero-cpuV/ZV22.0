@@ -8,24 +8,28 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #1a1a1a;
+            background-color: #000;
             color: #fff;
         }
         header {
-            background-color: #333;
-            padding: 1rem;
+            background-color: #111;
+            color: #ff0000;
             text-align: center;
+            padding: 1.5rem;
         }
         nav {
-            background-color: #444;
+            background-color: #222;
             padding: 0.5rem;
             text-align: center;
         }
         nav a {
-            color: #fff;
+            color: #ff0000;
             margin: 0 1rem;
             text-decoration: none;
             font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         main {
             padding: 2rem;
@@ -34,9 +38,11 @@
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
+            justify-content: center;
         }
         .producto {
-            background-color: #222;
+            background-color: #111;
+            border: 1px solid #ff0000;
             border-radius: 10px;
             padding: 1rem;
             width: calc(33% - 1rem);
@@ -45,11 +51,21 @@
         .producto img {
             max-width: 100%;
             border-radius: 10px;
+            margin-bottom: 1rem;
         }
         footer {
-            background-color: #333;
-            padding: 1rem;
+            background-color: #111;
+            color: #ff0000;
             text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        .contacto {
+            background-color: #222;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 2rem;
         }
     </style>
 </head>
@@ -59,7 +75,6 @@
     </header>
     <nav>
         <a href="#productos">Productos</a>
-        <a href="#promociones">Promociones</a>
         <a href="#contacto">Contacto</a>
     </nav>
     <main>
@@ -85,6 +100,11 @@
                     <p>Precio: $3000</p>
                 </div>
             </div>
+        </section>
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            <p>Correo: <a href="mailto:gianfranconmv@gmail.com" style="color: #ff0000;">gianfranconmv@gmail.com</a></p>
+            <p>Teléfono: <a href="tel:01136845916" style="color: #ff0000;">01136845916</a></p>
         </section>
     </main>
     <footer>
