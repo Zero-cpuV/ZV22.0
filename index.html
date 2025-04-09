@@ -238,3 +238,79 @@
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Procesadores</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .catalogo {
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .producto {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+    }
+    .producto img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .producto h3 {
+      margin: 15px 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Mi Empresa</strong></div>
+    <nav>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+  <section id="catalogo" class="catalogo">
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x180" alt="Procesador Intel">
+      <h3>Procesador Intel</h3>
+      <p>Alta calidad y rendimiento para tus necesidades tecnológicas.</p>
+    </div>
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x180" alt="Procesador AMD">
+      <h3>Procesador AMD</h3>
+      <p>Innovación y potencia para tus proyectos más exigentes.</p>
+    </div>
+  </section>
+  <footer id="contacto">
+    <p>&copy; 2025 Mi Empresa Promocional | contacto@miempresa.com</p>
+  </footer>
+</body>
+</html>
