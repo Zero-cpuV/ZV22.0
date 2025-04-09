@@ -166,3 +166,75 @@
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto Directo</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav span {
+      color: white;
+      margin: 0 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    #contact-info {
+      display: none;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align: center;
+    }
+    #contact-info button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Mi Empresa</strong></div>
+    <nav>
+      <span onclick="showContactInfo()">Contacto</span>
+    </nav>
+  </header>
+  <div id="contact-info">
+    <p><strong>Número:</strong> 1136845916</p>
+    <p><strong>Correo:</strong> Gianfranconmv@gmail.com</p>
+    <button onclick="closeContactInfo()">Cerrar</button>
+  </div>
+  <script>
+    function showContactInfo() {
+      document.getElementById('contact-info').style.display = 'block';
+    }
+    function closeContactInfo() {
+      document.getElementById('contact-info').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
