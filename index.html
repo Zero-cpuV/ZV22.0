@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Empresa Promocional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .hero {
+      padding: 60px 40px;
+      background: linear-gradient(to right, #4b6cb7, #182848);
+      color: white;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: auto;
+    }
+    .productos {
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .producto {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+    }
+    .producto img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .producto h3 {
+      margin: 15px 0 10px;
+    }
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Mi Empresa</strong></div>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>  <section class="hero">
+    <h1>Soluciones promocionales personalizadas</h1>
+    <p>Impulsá tu marca con productos que generan impacto y fidelizan clientes.</p>
+  </section>  <section id="productos" class="productos">
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x180" alt="Producto 1">
+      <h3>Bolígrafo personalizado</h3>
+      <p>Alta calidad y excelente visibilidad de marca.</p>
+    </div>
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x180" alt="Producto 2">
+      <h3>Taza corporativa</h3>
+      <p>Perfecta para oficinas, eventos y regalos.</p>
+    </div>
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x180" alt="Producto 3">
+      <h3>Remera con logo</h3>
+      <p>Variedad de talles, colores y estampados.</p>
+    </div>
+  </section>  <footer id="contacto">
+    <p>&copy; 2025 Mi Empresa Promocional | contacto@miempresa.com</p>
+  </footer>
+</body>
+</html>
