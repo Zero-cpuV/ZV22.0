@@ -1,71 +1,71 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Empresa Promocional</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>Gaming Tech Store</title>
   <style>
+    /* Estilos generales */
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
     }
     header {
-      background-color: #1a1a1a;
-      color: white;
-      padding: 20px 40px;
+      background-color: #1f1f1f;
+      padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    nav a {
-      color: white;
-      margin: 0 15px;
+    header nav a {
+      color: #ffffff;
       text-decoration: none;
-      font-weight: 600;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    header nav a:hover {
+      color: #00bcd4;
     }
     .hero {
-      padding: 60px 40px;
-      background: linear-gradient(to right, #4b6cb7, #182848);
-      color: white;
+      background: url('https://via.placeholder.com/1200x400') no-repeat center center;
+      background-size: cover;
       text-align: center;
+      padding: 80px 20px;
     }
     .hero h1 {
       font-size: 48px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     .hero p {
       font-size: 18px;
-      max-width: 600px;
-      margin: auto;
     }
-    .productos {
-      padding: 60px 40px;
+    .catalogo {
+      padding: 40px 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
     }
     .producto {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      background-color: #1f1f1f;
+      border-radius: 10px;
       overflow: hidden;
       text-align: center;
-      padding: 20px;
+      padding: 15px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
     }
     .producto img {
       width: 100%;
-      height: 180px;
+      height: 200px;
       object-fit: cover;
-      border-radius: 8px;
     }
     .producto h3 {
-      margin: 15px 0 10px;
+      margin: 15px 0 5px;
     }
     footer {
-      background-color: #1a1a1a;
-      color: white;
+      background-color: #1f1f1f;
       text-align: center;
       padding: 20px;
     }
@@ -73,244 +73,36 @@
 </head>
 <body>
   <header>
-    <div><strong>Mi Empresa</strong></div>
+    <div><strong>Gaming Tech Store</strong></div>
     <nav>
-      <a href="#productos">Productos</a>
+      <a href="#catalogo">Catálogo</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#contacto">Contacto</a>
     </nav>
-  </header>  <section class="hero">
-    <h1>Soluciones promocionales personalizadas</h1>
-    <p>Impulsá tu marca con productos que generan impacto y fidelizan clientes.</p>
-  </section>  <section id="productos" class="productos">
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x180" alt="Producto 1">
-      <h3>Bolígrafo personalizado</h3>
-      <p>Alta calidad y excelente visibilidad de marca.</p>
-    </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x180" alt="Producto 2">
-      <h3>Taza corporativa</h3>
-      <p>Perfecta para oficinas, eventos y regalos.</p>
-    </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x180" alt="Producto 3">
-      <h3>Remera con logo</h3>
-      <p>Variedad de talles, colores y estampados.</p>
-    </div>
-  </section>  <footer id="contacto">
-    <p>&copy; 2025 Mi Empresa Promocional | contacto@miempresa.com</p>
-  </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto Dinámico</title>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    nav a {
-      color: #007bff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    #contact-info {
-      display: none;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      padding: 20px;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-    #contact-info button {
-      margin-top: 10px;
-      padding: 8px 12px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <nav>
-      <a href="#" onclick="showContactInfo()">Contacto</a>
-    </nav>
   </header>
-  <div id="contact-info">
-    <p><strong>Número:</strong> 1136845916</p>
-    <p><strong>Correo:</strong> Gianfranconmv@gmail.com</p>
-    <button onclick="closeContactInfo()">Cerrar</button>
-  </div>
-  <script>
-    function showContactInfo() {
-      document.getElementById('contact-info').style.display = 'block';
-    }
-    function closeContactInfo() {
-      document.getElementById('contact-info').style.display = 'none';
-    }
-  </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto Directo</title>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #1a1a1a;
-      color: white;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav span {
-      color: white;
-      margin: 0 15px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    #contact-info {
-      display: none;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      padding: 20px;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      text-align: center;
-    }
-    #contact-info button {
-      margin-top: 10px;
-      padding: 8px 12px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div><strong>Mi Empresa</strong></div>
-    <nav>
-      <span onclick="showContactInfo()">Contacto</span>
-    </nav>
-  </header>
-  <div id="contact-info">
-    <p><strong>Número:</strong> 1136845916</p>
-    <p><strong>Correo:</strong> Gianfranconmv@gmail.com</p>
-    <button onclick="closeContactInfo()">Cerrar</button>
-  </div>
-  <script>
-    function showContactInfo() {
-      document.getElementById('contact-info').style.display = 'block';
-    }
-    function closeContactInfo() {
-      document.getElementById('contact-info').style.display = 'none';
-    }
-  </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo de Procesadores</title>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #1a1a1a;
-      color: white;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .catalogo {
-      padding: 60px 40px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-    .producto {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      text-align: center;
-      padding: 20px;
-    }
-    .producto img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .producto h3 {
-      margin: 15px 0 10px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div><strong>Mi Empresa</strong></div>
-    <nav>
-      <a href="#catalogo">Catálogo</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
+  <section class="hero">
+    <h1>Bienvenido a Gaming Tech Store</h1>
+    <p>Tu tienda ideal para componentes, accesorios y todo lo que necesitas para gaming.</p>
+  </section>
   <section id="catalogo" class="catalogo">
     <div class="producto">
-      <img src="https://via.placeholder.com/300x180" alt="Procesador Intel">
+      <img src="https://via.placeholder.com/300x200" alt="Procesador Intel">
       <h3>Procesador Intel</h3>
-      <p>Alta calidad y rendimiento para tus necesidades tecnológicas.</p>
+      <p>Ideal para rendimiento extremo.</p>
     </div>
     <div class="producto">
-      <img src="https://via.placeholder.com/300x180" alt="Procesador AMD">
+      <img src="https://via.placeholder.com/300x200" alt="Procesador AMD">
       <h3>Procesador AMD</h3>
-      <p>Innovación y potencia para tus proyectos más exigentes.</p>
+      <p>Innovación para gamers exigentes.</p>
+    </div>
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x200" alt="Tarjeta Gráfica">
+      <h3>Tarjeta Gráfica</h3>
+      <p>Potencia gráfica de última generación.</p>
     </div>
   </section>
   <footer id="contacto">
-    <p>&copy; 2025 Mi Empresa Promocional | contacto@miempresa.com</p>
+    <p>&copy; 2025 Gaming Tech Store | contacto@gamingtech.com</p>
   </footer>
 </body>
 </html>
