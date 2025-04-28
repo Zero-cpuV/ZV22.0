@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VCM | Productos Personalizados</title>
+  <title>VCM</title>
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
       font-family: Arial, sans-serif;
     }
 
     body {
+      background-color: #F1F1F1; /* Fondo gris claro */
       line-height: 1.6;
-      background-color: #f7f7f7;
       color: #333;
     }
 
     header {
-      background-color: #1a1a1a;
+      background-color: #6A1C4C; /* Phantom 186C */
       color: white;
       padding: 1rem 2rem;
       display: flex;
@@ -43,209 +43,209 @@
       text-decoration: none;
     }
 
-    .hero {
-      background: url('https://via.placeholder.com/1200x400?text=Banner+VCM') no-repeat center center/cover;
+    /* Sección de inicio */
+    .inicio {
       padding: 5rem 2rem;
+      background-color: #2A2A2A; /* Fondo oscuro */
+      color: white;
       text-align: center;
-      color: white;
-      background-color: #444;
     }
 
-    .hero h1 {
-      font-size: 2.5rem;
+    .inicio h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
 
-    .hero p {
-      margin: 1rem 0;
+    .inicio p {
+      font-size: 1.2rem;
     }
 
-    .btn {
-      background-color: #ff6600;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .categorias {
+    /* Sección de catálogo */
+    .catalogo {
       padding: 3rem 2rem;
       text-align: center;
+      background-color: #FFFFFF; /* Fondo blanco */
     }
 
-    .categorias .grid {
-      display: flex;
+    .catalogo h2 {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #6A1C4C; /* Phantom 186C */
+    }
+
+    .productos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 2rem;
-      justify-content: center;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      background: white;
       padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      width: 300px;
     }
 
-    .card img {
+    .producto-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .producto-card:hover {
+      transform: translateY(-10px); /* Efecto hover */
+    }
+
+    .producto-card img {
       width: 100%;
+      height: 200px;
+      object-fit: cover;
       border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+
+    .producto-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #6A1C4C; /* Phantom 186C */
+    }
+
+    .producto-card p {
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .producto-card span {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #9C1B5E; /* Color secundario */
+    }
+
+    .producto-card button {
+      background-color: #9C1B5E; /* Color secundario */
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .producto-card button:hover {
+      background-color: #6A1C4C; /* Phantom 186C */
+    }
+
+    /* Sección de contacto */
+    .contacto {
+      padding: 3rem 2rem;
+      text-align: center;
+      background-color: #FFFFFF;
+    }
+
+    .contacto h2 {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #6A1C4C; /* Phantom 186C */
+    }
+
+    .informacion {
+      margin: 2rem 0;
+      font-size: 1.2rem;
+    }
+
+    .informacion p {
+      margin: 0.5rem 0;
     }
 
     footer {
-      background: #1a1a1a;
+      background-color: #6A1C4C; /* Phantom 186C */
       color: white;
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
     }
 
-    .formulario {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 500px;
-      margin: auto;
+    footer a {
+      color: #F1F1F1; /* Blanco para los enlaces */
+      text-decoration: none;
     }
 
-    input, textarea, button {
-      padding: 0.5rem;
-      font-size: 1rem;
-    }
-
-    .carrito {
-      padding: 2rem;
-      background: #f3f3f3;
-    }
-
-    .carrito ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .carrito li {
-      padding: 0.5rem;
-      background-color: #fff;
-      margin-bottom: 0.5rem;
-      border-radius: 5px;
-    }
-
-    .carrito p {
-      font-weight: bold;
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+  <!-- Sección de inicio -->
   <header>
     <div class="logo">VCM</div>
     <nav>
       <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Página de inicio -->
-  <section class="hero">
-    <h1>Productos promocionales personalizados</h1>
-    <p>Impulsa tu marca con artículos únicos y de calidad.</p>
-    <a href="productos.html" class="btn">Ver catálogo</a>
+  <!-- Sección de Inicio -->
+  <section class="inicio" id="inicio">
+    <h1>Bienvenidos a VCM</h1>
+    <p>Descubre nuestra amplia gama de productos personalizados para tu empresa o evento. ¡Haz que tu marca se destaque!</p>
   </section>
 
-  <section class="categorias">
-    <h2>Categorías destacadas</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200?text=Mochilas" alt="Mochilas" />
-        <h3>Mochilas</h3>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200?text=Botellas" alt="Botellas" />
-        <h3>Botellas</h3>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200?text=Libretas" alt="Libretas" />
-        <h3>Libretas</h3>
-      </div>
-    </div>
-  </section>
-
-  <!-- Página de productos -->
-  <section class="categorias">
+  <!-- Sección del Catálogo -->
+  <section class="catalogo" id="catalogo">
     <h2>Catálogo de Productos</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200?text=Taza+VCM" alt="Taza" />
-        <h3>Taza Personalizada</h3>
-        <p>$1500</p>
-        <button onclick="agregarAlCarrito('Taza', 1500)">Agregar al carrito</button>
+    <div class="productos-grid">
+      <!-- Producto 1 -->
+      <div class="producto-card">
+        <img src="https://via.placeholder.com/300x200?text=Producto+1" alt="Producto 1">
+        <h3>Producto 1</h3>
+        <p>Descripción breve del producto. Es ideal para empresas que necesitan personalizar su branding.</p>
+        <span>$1200</span>
+        <button>Agregar al carrito</button>
       </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200?text=Bolígrafo+VCM" alt="Bolígrafo" />
-        <h3>Bolígrafo con Logo</h3>
-        <p>$500</p>
-        <button onclick="agregarAlCarrito('Bolígrafo', 500)">Agregar al carrito</button>
+
+      <!-- Producto 2 -->
+      <div class="producto-card">
+        <img src="https://via.placeholder.com/300x200?text=Producto+2" alt="Producto 2">
+        <h3>Producto 2</h3>
+        <p>Descripción breve del producto. Diseño exclusivo que hará destacar tu marca en cualquier evento.</p>
+        <span>$950</span>
+        <button>Agregar al carrito</button>
       </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200?text=Mochila+VCM" alt="Mochila" />
-        <h3>Mochila Corporativa</h3>
-        <p>$3200</p>
-        <button onclick="agregarAlCarrito('Mochila', 3200)">Agregar al carrito</button>
+
+      <!-- Producto 3 -->
+      <div class="producto-card">
+        <img src="https://via.placeholder.com/300x200?text=Producto+3" alt="Producto 3">
+        <h3>Producto 3</h3>
+        <p>Perfecto para regalar a tus clientes o empleados, con alta calidad y personalización a tu gusto.</p>
+        <span>$800</span>
+        <button>Agregar al carrito</button>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="producto-card">
+        <img src="https://via.placeholder.com/300x200?text=Producto+4" alt="Producto 4">
+        <h3>Producto 4</h3>
+        <p>El regalo corporativo ideal. Fácil de personalizar y siempre útil para tu público objetivo.</p>
+        <span>$1500</span>
+        <button>Agregar al carrito</button>
       </div>
     </div>
   </section>
 
-  <!-- Carrito -->
-  <section class="carrito">
-    <h2>🛒 Carrito</h2>
-    <ul id="carrito-lista"></ul>
-    <p>Total: $<span id="total">0</span></p>
-  </section>
-
-  <!-- Página de contacto -->
-  <section class="categorias">
+  <!-- Sección de Contacto -->
+  <section class="contacto" id="contacto">
     <h2>Contacto</h2>
-    <form class="formulario">
-      <label>Nombre:</label>
-      <input type="text" required />
-      <label>Email:</label>
-      <input type="email" required />
-      <label>Mensaje:</label>
-      <textarea required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+    <div class="informacion">
+      <p><strong>Teléfono:</strong> 1131904180</p>
+      <p><strong>Correo electrónico:</strong> <a href="mailto:vcmmarkin@gmail.com">vcmmarkin@gmail.com</a></p>
+      <p>Si tienes alguna duda o pregunta, no dudes en ponerte en contacto con nosotros. ¡Estaremos encantados de ayudarte!</p>
+    </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 VCM. Todos los derechos reservados.</p>
+    <p>© 2025 VCM. Todos los derechos reservados. | <a href="mailto:vcmmarkin@gmail.com">Contáctanos</a></p>
   </footer>
-
-  <script>
-    let carrito = [];
-    let total = 0;
-
-    function agregarAlCarrito(producto, precio) {
-      carrito.push({ producto, precio });
-      total += precio;
-      actualizarCarrito();
-    }
-
-    function actualizarCarrito() {
-      const lista = document.getElementById('carrito-lista');
-      const totalElemento = document.getElementById('total');
-
-      lista.innerHTML = '';
-      carrito.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.producto} - $${item.precio}`;
-        lista.appendChild(li);
-      });
-
-      totalElemento.textContent = total;
-    }
-  </script>
 </body>
 </html>
