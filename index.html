@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VCM</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VCM - Página de Productos</title>
   <style>
     * {
       margin: 0;
@@ -18,6 +18,7 @@
       color: #333;
     }
 
+    /* Header */
     header {
       background-color: #6A1C4C; /* Phantom 186C */
       color: white;
@@ -35,49 +36,64 @@
     nav ul {
       display: flex;
       list-style: none;
-      gap: 1.5rem;
+      gap: 2rem;
     }
 
     nav a {
       color: white;
       text-decoration: none;
+      position: relative;
     }
 
-    /* Sección de inicio */
-    .inicio {
-      padding: 5rem 2rem;
-      background-color: #2A2A2A; /* Fondo oscuro */
+    /* Submenú */
+    nav li:hover > ul {
+      display: block;
+    }
+
+    nav ul ul {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background-color: #6A1C4C;
+      padding: 1rem;
+      list-style: none;
+      border-radius: 5px;
+    }
+
+    nav ul ul li {
+      padding: 0.5rem;
+    }
+
+    nav ul ul li a {
+      color: white;
+    }
+
+    /* Banner */
+    .banner {
+      background: url('https://via.placeholder.com/1920x600?text=BANNER') no-repeat center center;
+      background-size: cover;
       color: white;
       text-align: center;
+      padding: 5rem 2rem;
     }
 
-    .inicio h1 {
+    .banner h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
     }
 
-    .inicio p {
-      font-size: 1.2rem;
+    .banner p {
+      font-size: 1.5rem;
     }
 
-    /* Sección de catálogo */
-    .catalogo {
-      padding: 3rem 2rem;
-      text-align: center;
-      background-color: #FFFFFF; /* Fondo blanco */
-    }
-
-    .catalogo h2 {
-      margin-bottom: 2rem;
-      font-size: 2rem;
-      color: #6A1C4C; /* Phantom 186C */
-    }
-
+    /* Productos */
     .productos-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 2rem;
-      padding: 1rem;
+      padding: 2rem;
+      background-color: #fff;
     }
 
     .producto-card {
@@ -104,7 +120,7 @@
     .producto-card h3 {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
-      color: #6A1C4C; /* Phantom 186C */
+      color: #6A1C4C;
     }
 
     .producto-card p {
@@ -132,30 +148,9 @@
       background-color: #6A1C4C; /* Phantom 186C */
     }
 
-    /* Sección de contacto */
-    .contacto {
-      padding: 3rem 2rem;
-      text-align: center;
-      background-color: #FFFFFF;
-    }
-
-    .contacto h2 {
-      margin-bottom: 2rem;
-      font-size: 2rem;
-      color: #6A1C4C; /* Phantom 186C */
-    }
-
-    .informacion {
-      margin: 2rem 0;
-      font-size: 1.2rem;
-    }
-
-    .informacion p {
-      margin: 0.5rem 0;
-    }
-
+    /* Footer */
     footer {
-      background-color: #6A1C4C; /* Phantom 186C */
+      background-color: #6A1C4C;
       color: white;
       text-align: center;
       padding: 1rem;
@@ -163,83 +158,101 @@
     }
 
     footer a {
-      color: #F1F1F1; /* Blanco para los enlaces */
+      color: #F1F1F1;
       text-decoration: none;
     }
 
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* Contact Section */
+    .contacto {
+      padding: 3rem 2rem;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .contacto h2 {
+      font-size: 2rem;
+      color: #6A1C4C;
+      margin-bottom: 2rem;
+    }
+
+    .informacion p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
   </style>
 </head>
 <body>
-  <!-- Sección de inicio -->
+  <!-- Header -->
   <header>
-    <div class="logo">VCM</div>
+    <div class="logo">
+      VCM
+    </div>
     <nav>
       <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#catalogo">Catálogo</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Productos</a>
+          <ul>
+            <li><a href="#">Categoría 1</a></li>
+            <li><a href="#">Categoría 2</a></li>
+            <li><a href="#">Categoría 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Sección de Inicio -->
-  <section class="inicio" id="inicio">
-    <h1>Bienvenidos a VCM</h1>
-    <p>Descubre nuestra amplia gama de productos personalizados para tu empresa o evento. ¡Haz que tu marca se destaque!</p>
-  </section>
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Bienvenido a VCM</h1>
+    <p>Descubre nuestros productos y servicios personalizados.</p>
+  </div>
 
-  <!-- Sección del Catálogo -->
-  <section class="catalogo" id="catalogo">
-    <h2>Catálogo de Productos</h2>
-    <div class="productos-grid">
-      <!-- Producto 1 -->
-      <div class="producto-card">
-        <img src="https://via.placeholder.com/300x200?text=Producto+1" alt="Producto 1">
-        <h3>Producto 1</h3>
-        <p>Descripción breve del producto. Es ideal para empresas que necesitan personalizar su branding.</p>
-        <span>$1200</span>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <!-- Producto 2 -->
-      <div class="producto-card">
-        <img src="https://via.placeholder.com/300x200?text=Producto+2" alt="Producto 2">
-        <h3>Producto 2</h3>
-        <p>Descripción breve del producto. Diseño exclusivo que hará destacar tu marca en cualquier evento.</p>
-        <span>$950</span>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <!-- Producto 3 -->
-      <div class="producto-card">
-        <img src="https://via.placeholder.com/300x200?text=Producto+3" alt="Producto 3">
-        <h3>Producto 3</h3>
-        <p>Perfecto para regalar a tus clientes o empleados, con alta calidad y personalización a tu gusto.</p>
-        <span>$800</span>
-        <button>Agregar al carrito</button>
-      </div>
-
-      <!-- Producto 4 -->
-      <div class="producto-card">
-        <img src="https://via.placeholder.com/300x200?text=Producto+4" alt="Producto 4">
-        <h3>Producto 4</h3>
-        <p>El regalo corporativo ideal. Fácil de personalizar y siempre útil para tu público objetivo.</p>
-        <span>$1500</span>
-        <button>Agregar al carrito</button>
-      </div>
+  <!-- Productos -->
+  <div class="productos-grid">
+    <div class="producto-card">
+      <img src="https://via.placeholder.com/300x200?text=Producto+1" alt="Producto 1">
+      <h3>Producto 1</h3>
+      <p>Descripción breve del producto. Ideal para empresas.</p>
+      <span>$1200</span>
+      <button>Agregar al carrito</button>
     </div>
-  </section>
+    <div class="producto-card">
+      <img src="https://via.placeholder.com/300x200?text=Producto+2" alt="Producto 2">
+      <h3>Producto 2</h3>
+      <p>Descripción breve del producto. Perfecto para eventos.</p>
+      <span>$950</span>
+      <button>Agregar al carrito</button>
+    </div>
+    <div class="producto-card">
+      <img src="https://via.placeholder.com/300x200?text=Producto+3" alt="Producto 3">
+      <h3>Producto 3</h3>
+      <p>Ideal para regalos corporativos.</p>
+      <span>$800</span>
+      <button>Agregar al carrito</button>
+    </div>
+    <div class="producto-card">
+      <img src="https://via.placeholder.com/300x200?text=Producto+4" alt="Producto 4">
+      <h3>Producto 4</h3>
+      <p>Exclusivo para empresas con estilo.</p>
+      <span>$1500</span>
+      <button>Agregar al carrito</button>
+    </div>
+  </div>
 
-  <!-- Sección de Contacto -->
-  <section class="contacto" id="contacto">
+  <!-- Contacto -->
+  <section class="contacto">
     <h2>Contacto</h2>
     <div class="informacion">
       <p><strong>Teléfono:</strong> 1131904180</p>
       <p><strong>Correo electrónico:</strong> <a href="mailto:vcmmarkin@gmail.com">vcmmarkin@gmail.com</a></p>
-      <p>Si tienes alguna duda o pregunta, no dudes en ponerte en contacto con nosotros. ¡Estaremos encantados de ayudarte!</p>
+      <p>Si tienes alguna pregunta o inquietud, no dudes en contactarnos.</p>
     </div>
   </section>
 
