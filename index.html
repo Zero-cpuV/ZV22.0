@@ -4,49 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VCM - Página de Productos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
     }
 
     body {
-      background-color: #F1F1F1; /* Fondo gris claro */
-      line-height: 1.6;
+      font-family: 'Roboto', sans-serif;
+      background-color: #F1F1F1;
       color: #333;
     }
 
     /* Header */
     header {
-      background-color: #6A1C4C; /* Phantom 186C */
+      background-color: #9C1B5E; /* Phantom 186C */
       color: white;
-      padding: 1rem 2rem;
+      padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .logo {
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: bold;
     }
 
     nav ul {
-      display: flex;
       list-style: none;
-      gap: 2rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li {
+      position: relative;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      position: relative;
+      font-weight: 500;
     }
 
-    /* Submenú */
-    nav li:hover > ul {
+    nav ul li:hover > ul {
       display: block;
     }
 
@@ -55,18 +59,14 @@
       position: absolute;
       top: 30px;
       left: 0;
-      background-color: #6A1C4C;
+      background-color: #9C1B5E;
       padding: 1rem;
       list-style: none;
       border-radius: 5px;
     }
 
     nav ul ul li {
-      padding: 0.5rem;
-    }
-
-    nav ul ul li a {
-      color: white;
+      padding: 0.5rem 0;
     }
 
     /* Banner */
@@ -75,25 +75,25 @@
       background-size: cover;
       color: white;
       text-align: center;
-      padding: 5rem 2rem;
+      padding: 4rem;
     }
 
     .banner h1 {
       font-size: 3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .banner p {
       font-size: 1.5rem;
+      font-weight: 400;
     }
 
     /* Productos */
     .productos-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
-      background-color: #fff;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem 2rem;
     }
 
     .producto-card {
@@ -102,11 +102,11 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       padding: 1.5rem;
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s;
     }
 
     .producto-card:hover {
-      transform: translateY(-10px); /* Efecto hover */
+      transform: translateY(-10px);
     }
 
     .producto-card img {
@@ -118,52 +118,29 @@
     }
 
     .producto-card h3 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       margin-bottom: 0.5rem;
-      color: #6A1C4C;
+      color: #9C1B5E;
     }
 
     .producto-card p {
       color: #666;
+      font-size: 1rem;
       margin-bottom: 1rem;
     }
 
-    .producto-card span {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #9C1B5E; /* Color secundario */
-    }
-
     .producto-card button {
-      background-color: #9C1B5E; /* Color secundario */
+      background-color: #9C1B5E;
       color: white;
       border: none;
       padding: 0.75rem 1.5rem;
       border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s;
     }
 
     .producto-card button:hover {
-      background-color: #6A1C4C; /* Phantom 186C */
-    }
-
-    /* Footer */
-    footer {
       background-color: #6A1C4C;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-
-    footer a {
-      color: #F1F1F1;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
     }
 
     /* Contact Section */
@@ -175,7 +152,7 @@
 
     .contacto h2 {
       font-size: 2rem;
-      color: #6A1C4C;
+      color: #9C1B5E;
       margin-bottom: 2rem;
     }
 
@@ -184,9 +161,27 @@
       margin: 0.5rem 0;
     }
 
+    /* Footer */
+    footer {
+      background-color: #9C1B5E;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+
   <!-- Header -->
   <header>
     <div class="logo">
@@ -211,7 +206,7 @@
   <!-- Banner -->
   <div class="banner">
     <h1>Bienvenido a VCM</h1>
-    <p>Descubre nuestros productos y servicios personalizados.</p>
+    <p>Explora nuestros productos de alta calidad para tu empresa.</p>
   </div>
 
   <!-- Productos -->
@@ -260,5 +255,6 @@
   <footer>
     <p>© 2025 VCM. Todos los derechos reservados. | <a href="mailto:vcmmarkin@gmail.com">Contáctanos</a></p>
   </footer>
+
 </body>
 </html>
