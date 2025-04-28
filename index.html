@@ -1,119 +1,268 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZerO</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #000;
-            color: #fff;
-        }
-        header {
-            background-color: #111;
-            color: #ff4d4d; /* Rojo más tranquilo */
-            text-align: center;
-            padding: 1.5rem;
-        }
-        nav {
-            background-color: #222;
-            padding: 0.5rem;
-            text-align: center;
-        }
-        nav a {
-            color: #ff4d4d; /* Rojo más tranquilo */
-            margin: 0 1rem;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            padding: 2rem;
-        }
-        .productos {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-        }
-        .producto {
-            background-color: #111;
-            border: 1px solid #ff4d4d; /* Rojo más tranquilo */
-            border-radius: 10px;
-            padding: 1rem;
-            width: calc(33% - 1rem);
-            text-align: center;
-        }
-        .producto img {
-            max-width: 100%;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-        }
-        footer {
-            background-color: #111;
-            color: #ff4d4d; /* Rojo más tranquilo */
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-        .contacto {
-            background-color: #222;
-            padding: 1rem;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: 2rem;
-        }
-        .marca {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #ff4d4d;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VCM | Productos Personalizados</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>ZerO</h1>
-    </header>
+  <header>
+    <div class="logo">VCM</div>
     <nav>
-        <a href="#productos">Productos</a>
-        <a href="#contacto">Contacto</a>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
     </nav>
-    <main>
-        <section id="productos">
-            <h2>Catálogo de Productos</h2>
-            <div class="productos">
-                <div class="producto">
-                    <img src="procesador1.jpg" alt="Procesador 1">
-                    <h3>Procesador 1</h3>
-                    <p>Descripción del procesador.</p>
-                    <p>Precio: $1000</p>
-                </div>
-                <div class="producto">
-                    <img src="procesador2.jpg" alt="Procesador 2">
-                    <h3>Procesador 2</h3>
-                    <p>Descripción del procesador.</p>
-                    <p>Precio: $2000</p>
-                </div>
-                <div class="producto">
-                    <img src="procesador3.jpg" alt="Procesador 3">
-                    <h3>Procesador 3</h3>
-                    <p>Descripción del procesador.</p>
-                    <p>Precio: $3000</p>
-                </div>
-            </div>
-        </section>
-        <section id="contacto" class="contacto">
-            <h2>Contacto</h2>
-            <p>Correo: <a href="mailto:gianfranconmv@gmail.com" style="color: #ff4d4d;">gianfranconmv@gmail.com</a></p>
-            <p>Teléfono: <a href="tel:01136845916" style="color: #ff4d4d;">01136845916</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 ZerO</p>
-    </footer>
+  </header>
+
+  <section class="hero">
+    <h1>Productos promocionales personalizados</h1>
+    <p>Impulsa tu marca con artículos únicos y de calidad.</p>
+    <a href="#" class="btn">Ver catálogo</a>
+  </section>
+
+  <section class="categorias">
+    <h2>Categorías destacadas</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Mochilas" alt="Mochilas" />
+        <h3>Mochilas</h3>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Botellas" alt="Botellas" />
+        <h3>Botellas</h3>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Libretas" alt="Libretas" />
+        <h3>Libretas</h3>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 VCM. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+header {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  background: url('https://via.placeholder.com/1200x400?text=Banner+VCM') no-repeat center center/cover;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: white;
+  background-color: #444;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  margin: 1rem 0;
+}
+
+.btn {
+  background-color: #ff6600;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.categorias {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.categorias .grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 300px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+footer {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+vcm-sitio/
+├── index.html
+├── productos.html
+├── contacto.html
+├── style.css
+├── script.js
+└── img/ (imágenes genéricas)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo | VCM</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">VCM</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="categorias">
+    <h2>Catálogo de Productos</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Taza+VCM" alt="Taza" />
+        <h3>Taza Personalizada</h3>
+        <p>$1500</p>
+        <button onclick="agregarAlCarrito('Taza', 1500)">Agregar al carrito</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Bolígrafo+VCM" alt="Bolígrafo" />
+        <h3>Bolígrafo con Logo</h3>
+        <p>$500</p>
+        <button onclick="agregarAlCarrito('Bolígrafo', 500)">Agregar al carrito</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Mochila+VCM" alt="Mochila" />
+        <h3>Mochila Corporativa</h3>
+        <p>$3200</p>
+        <button onclick="agregarAlCarrito('Mochila', 3200)">Agregar al carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="carrito">
+    <h2>🛒 Carrito</h2>
+    <ul id="carrito-lista"></ul>
+    <p>Total: $<span id="total">0</span></p>
+  </section>
+
+  <footer>
+    <p>© 2025 VCM. Todos los derechos reservados.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto | VCM</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">VCM</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="categorias">
+    <h2>Contacto</h2>
+    <form class="formulario">
+      <label>Nombre:</label>
+      <input type="text" required />
+      <label>Email:</label>
+      <input type="email" required />
+      <label>Mensaje:</label>
+      <textarea required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 VCM. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+let carrito = [];
+let total = 0;
+
+function agregarAlCarrito(producto, precio) {
+  carrito.push({ producto, precio });
+  total += precio;
+  actualizarCarrito();
+}
+
+function actualizarCarrito() {
+  const lista = document.getElementById('carrito-lista');
+  const totalElemento = document.getElementById('total');
+
+  lista.innerHTML = '';
+  carrito.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = `${item.producto} - $${item.precio}`;
+    lista.appendChild(li);
+  });
+
+  totalElemento.textContent = total;
+}
